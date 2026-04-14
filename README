@@ -1,1 +1,29 @@
+When we build an application or website, at the beginning it usually runs on a single server. This works fine when only a few users are using it. But as the number of users grows, that one server starts getting too many requests. Because of this, the application becomes slow or may even crash. Also, if that single server goes down, the entire application becomes unavailable.
 
+To solve this problem, we add more servers so the work can be shared between them. Now the application has multiple servers instead of just one. But this creates another issue — how do we decide which request should go to which server? If there is no proper system, some servers may get too much traffic while others remain unused.
+
+This is where a load balancer comes in. A load balancer acts like a middle layer between users and servers. It receives all incoming requests and distributes them evenly across the available servers. This helps in improving performance, avoiding overload on any single server, and keeping the application running even if one server fails.
+
+In simple terms, a load balancer helps applications handle more users smoothly and reliably by sharing the workload across multiple servers
+
+## 1. High Availability & Fault Tolerance
+If one server fails, the load balancer automatically redirects traffic to healthy servers.
+Prevents downtime in critical applications.
+
+## 2. Scalability (Handling Traffic Growth)
+Distributes traffic across multiple backend servers.
+Makes it easy to add/remove servers as demand changes (horizontal scaling).
+
+3. Microservices Architecture
+Routes requests to different services based on URL paths or headers.
+Example: /users → user service, /orders → order service.
+
+4. Security (Basic Protection Layer)
+Can help mitigate:
+DDoS attacks (by distributing traffic)
+Malicious requests (via filtering rules)
+Often integrated with Web Application Firewalls (WAFs).
+
+5. SSL Termination
+Handles HTTPS encryption/decryption.
+Offloads CPU-intensive SSL processing from backend servers.
