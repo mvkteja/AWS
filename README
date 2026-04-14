@@ -27,3 +27,36 @@ Often integrated with Web Application Firewalls (WAFs).
 5. SSL Termination
 Handles HTTPS encryption/decryption.
 Offloads CPU-intensive SSL processing from backend servers.
+
+In Amazon Web Services (AWS), there are 4 types of load balancers:
+
+1. Application Load Balancer (ALB)
+    Works at Layer 7 (Application Layer)
+    Handles HTTP / HTTPS traffic
+    Can route based on:
+      URL path (/users, /orders)
+      Hostname
+      Headers
+    Best for:
+      Web applications
+      Microservices architecture
+2. Network Load Balancer (NLB)
+  Works at Layer 4 (Transport Layer)
+  Handles TCP, UDP traffic
+  Very high performance & low latency
+  Best for:
+    Real-time applications
+    Gaming, streaming
+3. Classic Load Balancer (CLB)
+  Older/legacy load balancer
+  Works at Layer 4 & Layer 7 (basic level)
+  Limited features compared to ALB/NLB
+  Not recommended for new applications
+4. Gateway Load Balancer (GWLB)
+  Used for security appliances
+  Works at Layer 3 (Network Layer)
+  Helps deploy:
+    Firewalls
+    Intrusion detection systems
+  Best for:
+    Advanced network security setups
